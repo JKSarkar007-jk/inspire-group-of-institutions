@@ -18,7 +18,7 @@ Files in this folder
 
    MANAGEMENT_ID        CHEIF001AK                      (text)
    MANAGEMENT_NAME      Amjad Khan                      (text)
-   MANAGEMENT_PASSWORD  (a NEW long password you choose) (type: Secret)
+   MANAGEMENT_PASSWORD  (Amjad@IGi) (type: Secret)
    SESSION_SECRET       (about 40 random letters and numbers, type: Secret)
 
    Do not share these values with anyone, and do not write them in any file or on GitHub.
