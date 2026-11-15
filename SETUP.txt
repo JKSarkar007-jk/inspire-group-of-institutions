@@ -1,0 +1,31 @@
+INSPIRE GROUP: MANAGEMENT LOGIN SETUP (Cloudflare Pages, no other service)
+
+Files in this folder
+  index.html, style.css, script.js     the website
+  functions/api/login.js               checks the ID and password on the server
+  functions/api/me.js                  checks that a person is still signed in
+  functions/api/logout.js              ends the session
+
+1. Upload everything to your GitHub repository (inspire-group-of-institutions, branch main).
+   Keep the folder structure: the three files in the main folder, and the "functions" folder
+   with its "api" folder inside it. On GitHub: Add file > Upload files, then drag in the
+   files AND the "functions" folder.
+
+2. Wait for Cloudflare Pages to finish deploying the new commit.
+
+3. In Cloudflare: Workers & Pages > inspire-group-of-institutions > Settings >
+   Variables and Secrets > Add (choose Production). Add these four:
+
+   MANAGEMENT_ID        CHEIF001AK                      (text)
+   MANAGEMENT_NAME      Amjad Khan                      (text)
+   MANAGEMENT_PASSWORD  (a NEW long password you choose) (type: Secret)
+   SESSION_SECRET       (about 40 random letters and numbers, type: Secret)
+
+   Do not share these values with anyone, and do not write them in any file or on GitHub.
+
+4. Deploy again (Deployments > the latest one > Retry deployment) so the secrets are used.
+
+5. Open your website, click Management Login, enter CHEIF001AK and the password.
+   Wrong details are refused. Logout ends the session.
+
+To change the password later: edit MANAGEMENT_PASSWORD in Cloudflare and deploy again.
