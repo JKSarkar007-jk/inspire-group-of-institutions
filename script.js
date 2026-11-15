@@ -185,3 +185,4 @@ document.getElementById("loginClose").addEventListener("click",loginClose);
 document.querySelectorAll("[data-login]").forEach(function(b){b.addEventListener("click",function(e){e.preventDefault();loginOpen(b.dataset.role)})});
 document.addEventListener("keydown",function(e){if(e.key==="Escape"&&!LG.hidden)loginClose()});
 P.innerHTML="<p class='lead'>Select a portal above to see its courses and send an enquiry.</p>";
+if(r.status!==200||(r.headers.get('content-type')||'').indexOf('json')<0){serverMissing();return}
